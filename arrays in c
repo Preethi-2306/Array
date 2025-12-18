@@ -1,0 +1,31 @@
+->Array is a pointer=pointer arithmetic(++,--) on array(see coding notes)
+->To calculate the array memory reservation=int a[30];
+since int is 4bytes =4*30; so answer is 120 bytes
+->we can also subtract onepointer from another 
+->we can aslo compare two pointers(see the notes)
+TRAVERSING AN ARRAY:-
+#include <stdio.h>
+int main() {
+    int aadhar[5];
+    
+    int *ptr = aadhar; //same as &aadhar[0] u know this write by default pointer points to the first element in the array
+    for (int i = 0; i < 5; i++) {
+        printf("%d index : ", i);
+        scanf("%d", (ptr + i)); // here we can do this also that is using the &aadhar[i]
+    }
+    printf("\n"); 
+    for (int i = 0; i < 5; i++) {
+        printf("%d index = %d\n", i, *(ptr + i)); // and here we can simply do aadhar[i]
+    }
+    return 0;
+} see here output will be 0 index : 4
+1 index : 5
+2 index : 7
+3 index : 5
+4 index : 4
+
+0 index = 4
+1 index = 5
+2 index = 7
+3 index = 5
+4 index = 4
