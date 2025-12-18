@@ -29,3 +29,8 @@ int main() {
 2 index = 7
 3 index = 5
 4 index = 4
+
+ARRAYS AS FUNCTION ARGUMENT:- 
+declaration:1) void num(int a[]//no need to specify the size it can be of any ,int n//so we use another varaible to declare the size)
+2)void num(int *a,int n)
+num(a//this also means that&a[0] so this will get stored in the *a,n);//function call 
